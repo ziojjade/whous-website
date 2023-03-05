@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+	background: #f3f5f9;
+	
+}
+.wrapper {
+	display: flex;
+	position: relative;
+
+}
+.wrapper .sidebar {
+	position: fixed;
+	width: 200px;
+	height: 1000px;
+	background-image: url(images/sidebarbck.jpg);
+	background-attachment: fixed;
+	  background-size: 80%;
+
+	padding: 30px 0;
+}
+.wrapper .sidebar h2{
+    color: #fff;
+	text-transform: uppercase;
+    text-align: center;
+	margin-bottom: 30px;
+
+}
+.wrapper .sidebar ul li{
+	padding: 15px;
+	border-bottom: 1px solid rgba(0,0,0,0.08);
+	border-top: 1px solid rgba(147,203,214,0.1);
+}
+
+.wrapper .sidebar ul li a{
+	color: #bdb8d7;
+	display: block;
+}
+.wrapper .sidebar ul li a .fas{
+	width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+	background-image: url(images/hoverbck.png);
+	background-size: 43%;
+	background-attachment: fixed;
+}
+.wrapper .sidebar ul li:hover a{
+	color: #EA5768;
+}  
+.wrapper .main_content{
+	width: 100%;
+	margin-left: 200px;
+}
+.background{
+	background-image: url(images/1background.jpg);
+	background-attachment: fixed;
+}
+.wrapper .main_content .header {
+	padding: 20px;
+	background: black;
+	opacity: 0.5;
+	color: #717171;
+	border-bottom: 3px solid #E3757F;
+	margin-left: 0px;
+	
+}
+ .border{
+    border: outset #93cbd6 4px;
+	
+	margin: 0x;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+div.ImageGallery {
+    margin-top: 150px;
+    margin-left: 110px;
+    border: 5px solid #f4874b;
+    background: rgba(92, 74, 114, 0.7);
+	float: left;
+}
+
+
+div.ImageGallery:hover{
+    border: 5px solid #f3b05a;
+	background: rgba(163, 88, 109, 0.7);
+}
+
+div.desc {
+    padding:15px;
+    text-align: center;
+	font-family: Comic Sans MS;
+	color: white;
+}
+
+div.ImageGallery2 {
+    margin-top: 150px;
+    margin-left: 110px;
+    border: 5px solid #f4874b;
+    background: rgba(92, 74, 114, 0.7);
+	float: left;
+}
+
+div.ImageGallery2:hover{
+    border: 5px solid #f3b05a;
+	background: rgba(163, 88, 109, 0.7);
+}
+
+div.ImageGallery3 {
+    margin-top: 150px;
+    margin-left: 110px;
+    border: 5px solid #f4874b;
+    background: rgba(92, 74, 114, 0.7);
+	float: left;
+}
+
+div.ImageGallery3:hover{
+    border: 5px solid #f3b05a;
+	background: rgba(163, 88, 109, 0.7);
+}
+
+div.ImageGallery4 {
+    margin-top: 100px;
+    margin-left: 110px;
+    border: 5px solid #f4874b;
+    background: rgba(92, 74, 114, 0.7);
+	float: left;
+}
+
+div.ImageGallery4:hover{
+    border: 5px solid #f3b05a;
+	background: rgba(163, 88, 109, 0.7);
+}
+
+div.ImageGallery4 {
+    margin-top: 100px;
+    margin-left: 110px;
+    border: 5px solid #f4874b;
+    background: rgba(92, 74, 114, 0.7);
+	float: left;
+}
+
+div.ImageGallery4:hover{
+    border: 5px solid #f3b05a;
+	background: rgba(163, 88, 109, 0.7);
+}
+
+div.ImageGallery5 {
+    margin-top: 100px;
+    margin-left: 110px;
+    border: 5px solid #f4874b;
+    background: rgba(92, 74, 114, 0.7);
+	float: left;
+}
+
+div.ImageGallery5:hover{
+    border: 5px solid #f3b05a;
+	background: rgba(163, 88, 109, 0.7);
+}
+
+div.text{
+  
+  color: #93cbd6;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 700px
+
+}
+
+button {
+    posi=tion: relative;
+	position: absolute;
+	top: 94%;
+	right: 3%;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	width: 190px;
+	height: 50px;
+	opacity: 1;
+	background: linear-gradient(to top, #6ca5d4 0%, #3883c1 90%);
+	font-family: forte;
+	
+}
+
+
+button span{
+    color: #000;
+	font-family: Montserrat;
+	font-size: 17px;
+	font-weight: 300px;
+	letter-spacing: 0.7px;
+	border:none;
+}
+
+
+@keyframes rotate{
+    0%
+	{
+	 transform: rotate(0deg) translate3d(0,0,0);
+	}
+	 25%
+	{
+	 transform: rotate(3deg) translate3d(0,0,0);
+	}
+	 50%
+	{
+	 transform: rotate(-3deg) translate3d(0,0,0);
+	}
+	 75%
+	{
+	 transform: rotate(1deg) translate3d(0,0,0);
+	}
+	 100%
+	{
+	 transform: rotate(0deg) translate3d(0,0,0);
+	}
+}
+
+button:hover span {
+   animation: storm 0.7s ease-in-out both;
+   animation-delay: 0.06s;
+   
+}
+
+@keyframes storm {
+   0%
+   {
+       transform: translate3d(0,0,0) translateZ(0);
+   }
+   25%
+   {
+       transform: translate3d(4px,0,0) translateZ(0);
+   }
+   50%
+   {
+       transform: translate3d(-3px,0,0) translateZ(0);
+   }
+   75%
+   {
+       transform: translate3d(2px,0,0) translateZ(0);
+   }
+   100%
+   {
+       transform: translate3d(0,0,0) translateZ(0);
+   }
+}
+
+
+div.text:hover{
+  
+  color: #EA5768;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 700px
+
+}
+
+</style>
+
+</head>
+
+
+<body class="background">
+   
+  <div class="wrapper">
+     <div class="sidebar">
+     
+	 <h2>Renan Jade&nbsp;<span style="font-weight: bold; color:#FFE577">☾</span></h2>	 
+      <ul>
+	    <li> <a href="Main website.html">Home</a> </li>
+		<li> <a href="Introduction.html">Introduction</a> </li>
+		<li> <a href="ImageGallery.html">Gallery</a> </li>
+		<li> <a href="#">Section 3</a> </li>
+      </ul>
+	 
+    </div>
+	  
+<div class="main_content">
+ 
+   <div class="header">Welcome... this page contains pieces of information, enjoy reading!</div>
+	
+ <div class="border">
+	
+  <div class="ImageGallery">
+     
+	 <div class="Image1">
+    	
+		<a target="_blank" href="myimages/image1.jpg">
+          <img src="myimages/image1.jpg" alt="Model" width= "225" height="200">
+        </a>
+
+        <div class="desc">I went to the Church </br>(with a pose)</div>
+     </div>
+	 
+	 </div>
+
+  	 
+  
+   <div class="ImageGallery2">
+     
+	 <div class="Image2">
+    	
+		<a target="_blank" href="myimages/image2.jpg">
+          <img src="myimages/image2.jpg" alt="Surfing guy" width= "225" height="200">
+        </a>
+
+        <div class="desc">Trying hard to be a surfer </br>(low budget)</div>
+     </div>
+	 
+  	
+     </div>
+	 
+	  <div class="ImageGallery3">
+     
+	 <div class="Image3">
+    	
+		<a target="_blank" href="myimages/image3.jpg">
+          <img src="myimages/image3.jpg" alt="A happy guy" width= "225" height="200">
+        </a>
+
+        <div class="desc">High class camera</br>(in mainit)</div>
+     </div>
+	 
+  	
+     </div>
+	 
+	  <div class="ImageGallery4">
+     
+	 <div class="Image4">
+    	
+		<a target="_blank" href="myimages/image4.jpg">
+          <img src="myimages/image4.jpg" alt="A lost baby boy" width= "225" height="200">
+        </a>
+
+        <div class="desc">Lookin for somethin</br>(my 1st Fb-profile pic)</div>
+     </div>
+	 
+  	
+     </div>
+	 
+	  <div class="ImageGallery5">
+     
+	 <div class="Image5">
+    	
+		<a target="_blank" href="myimages/image5.jpg">
+          <img src="myimages/image5.jpg" alt="Holding a tako" width= "225" height="200">
+        </a>
+
+        <div class="desc">Last ball</br>(my billiard era)</div>
+     </div>
+	 
+  	
+     </div>
+	 
+ </br>
+ </br>
+  </br>
+ </br>
+  </br>
+ </br>
+  </br>
+ </br>
+  </br>
+ </br>
+  </br>
+ </br>
+  </br>
+ </br>
+  <div class="button"> 
+   <a href="Or.html">
+    
+	<button>
+     <span style="color: white; font-family: Showcard Gothic;">Back to main menu</span>
+    </button>
+   
+   </a>
+  </div>
+ <div class="text"> <a href="#">______</a> </div>
+ 
+ 
+ </div>
+ </div>
+
+
+</body>
+
+</html>
